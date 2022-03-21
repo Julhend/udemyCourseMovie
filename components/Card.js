@@ -16,7 +16,7 @@ class Card extends React.PureComponent {
       <TouchableOpacity
         //Details nama harus sama kek yang di app.js
         //pas di klik ke halaman detail
-        onPress={() => navigation.navigate('Detail', {movieDetail: item})}
+        onPress={() => navigation.navigate('Detail', {movieId: item.id})}
         style={styles.container}>
         <Image
           resizeMode="cover"
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // justifyContent: 'center',
     height: 200,
+    marginBottom: 8,
   },
   image: {
     height: 200,

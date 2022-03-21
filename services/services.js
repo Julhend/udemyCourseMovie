@@ -31,7 +31,15 @@ export const getDocumentaryMovies = async () => {
   );
   return result.data.results;
 };
+
 export const getMovie = async id => {
   const result = await axios.get(`${baseUrl}/movie/${id}?${apiKey}`);
   return result.data;
+};
+
+export const searchMovieTv = async (query, type) => {
+  const result = await axios.get(
+    `${baseUrl}/search/${type}?${apiKey}&query=${query}`,
+  );
+  return result.data.results;
 };

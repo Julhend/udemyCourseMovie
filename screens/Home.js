@@ -6,6 +6,7 @@ import {
   Dimensions,
   ScrollView,
   ActivityIndicator,
+  Text,
 } from 'react-native';
 import {
   getPopularMovies,
@@ -89,6 +90,7 @@ const Home = ({navigation}) => {
 
           {popularMovies && (
             <View style={styles.carousel}>
+              {/* <Text style={styles.title}>{'Popular Movies'}</Text> */}
               <List
                 navigation={navigation}
                 title="Popular Movies"
@@ -99,6 +101,7 @@ const Home = ({navigation}) => {
 
           {popularTv && (
             <View style={styles.carousel}>
+              {/* <Text style={styles.title}>{'Popular Tv'}</Text> */}
               <List
                 navigation={navigation}
                 title="Popular Tv"
@@ -109,6 +112,7 @@ const Home = ({navigation}) => {
 
           {familyMovies && (
             <View style={styles.carousel}>
+              {/* <Text style={styles.title}>{'Family movies'}</Text> */}
               <List
                 navigation={navigation}
                 title="Family Movies"
@@ -119,6 +123,7 @@ const Home = ({navigation}) => {
 
           {documentaryMovies && (
             <View style={styles.carousel}>
+              {/* <Text style={styles.title}>{'Documentary movies'}</Text> */}
               <List
                 navigation={navigation}
                 title="Documentary Movies"
@@ -149,6 +154,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 10,
+  },
+  title: {
+    color: 'black',
+    marginBottom: -55,
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
 
